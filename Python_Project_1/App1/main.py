@@ -1,3 +1,5 @@
+# This is a simple todo app that allows you to add, show and edit todos.
+
 todos = []
 
 while True:
@@ -16,7 +18,7 @@ while True:
             number = int(input("Enter number of todo to edit: "))
             number = number - 1
             new_todo = input("Enter new todo: ")
-            todos[number] = new_todo                                                                                                             
+            todos[number] = new_todo
         case 'exit':
             break
 
