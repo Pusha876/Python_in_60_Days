@@ -8,20 +8,19 @@ while True:
         case 'add':
             todo = input("Enter a todo: ") + "\n"
 
-            file = open("todos.txt", "r", encoding="utf-8")
-            todos = file.readlines()
-            file.close()
+            with open("todos.txt", "r", encoding="utf-8") as file:
+                todos = file.readlines()
 
             todos.append(todo)
 
-            file = open("todos.txt", "w", encoding="utf-8")
-            file.writelines(todos)
-            file.close()
+            with open("todos.txt", "w", encoding="utf-8") as file:
+                file.writelines(todos)
+
         case 'show':
-            file = open("todos.txt", "r", encoding="utf-8")
-            todos = file.readlines()
-            file.close()
-                           
+
+            with open("todos.txt", "r", encoding="utf-8") as file:
+                todos = file.readlines()
+
             for index, item in enumerate(todos):
                 item = item.strip("\n")
                 row = f"{index + 1}-{item.title()}"
@@ -29,11 +28,31 @@ while True:
         case 'edit':
             number = int(input("Enter number of todo to edit: "))
             number = number - 1
+
+            with open("todos.txt", "r", encoding="utf-8") as file:
+                todos = file.readlines()
+
             new_todo = input("Enter new todo: ")
-            todos[number] = new_todo
+            todos[number] = new_todo + "\n"
+
+            with open("todos.txt", "w", encoding="utf-8") as file:
+                file.writelines(todos)
+
         case 'complete':
             number = int(input("Enter number of todo that was completed: "))
-            todos.pop(number - 1)
+
+            with open("todos.txt", "r", encoding="utf-8") as file:
+                todos = file.readlines()
+            index = number - 1
+            todo_to_remove = todos[index].strip("\n")
+            todos.pop(index)
+
+            with open("todos.txt", "w", encoding="utf-8") as file:
+                file.writelines(todos)
+
+            message = f"The todo {todo_to_remove} was completed."
+            print(message)
+
         case 'exit':
             break
 

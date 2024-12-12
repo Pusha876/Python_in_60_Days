@@ -1,8 +1,3 @@
 prepare
 shower
 drink
-smoke
-milk
-drill
-fire
-goat
