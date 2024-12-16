@@ -1,4 +1,4 @@
-# if elif else dictionaries
+# if, elif, else, dictionaries
 
 ### if-elif-else can be used to check multiple conditions. Conditions are expressions that evaluate to either True or False.
 ```
