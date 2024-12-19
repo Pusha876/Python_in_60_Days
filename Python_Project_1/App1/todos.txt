@@ -2,5 +2,5 @@ Wash the dishes
 go get ice cream
 get a workout in
 make soup
-make pizza
 go for a run
+change todos list function
