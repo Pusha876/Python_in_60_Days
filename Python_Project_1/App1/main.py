@@ -1,6 +1,11 @@
 # This is a simple todo app that allows you to add, show and edit todos.
 # from functions import get_todos, write_todos
+import time
 import functions
+
+
+now = time.strftime("%b %d, %Y %H:%M:%S", time.localtime())
+print(f"App started at {now}")
 
 text = """
 Welcome to the todo app.
