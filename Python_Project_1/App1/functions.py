@@ -1,3 +1,6 @@
+FILEPATH = "todos.txt"
+
+
 def get_todos(filepath="todos.txt"):
     """ Read the todos from the file and return them as a list. """
     with open(filepath, "r", encoding="utf-8") as file_local:
