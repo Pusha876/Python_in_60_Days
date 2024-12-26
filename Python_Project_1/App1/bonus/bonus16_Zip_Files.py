@@ -6,7 +6,7 @@ from bonus17_zip_creator import make_archive
 
 label1 = zf.Text("Select files to compress: ")
 input1 = zf.Input()
-choose_button1 = zf.FileBrowse("Choose", key="files")
+choose_button1 = zf.FilesBrowse("Choose", key="files")
 
 label2 = zf.Text("Select destination folder: ")
 input2 = zf.Input()
@@ -22,13 +22,14 @@ window = zf.Window("File Compressor", layout=[
 
 while True:
     event, values = window.read()
-    print(event, values)
-    filepaths = values["files"].split(";")
-    folder = values["folder"]
-    make_archive(filepaths, folder)
-    window["output"].update(value="Files compressed successfully.")
-    if event == zf.WIN_CLOSED:
+    if event == zf.WIN_CLOSED or event == "Exit":
         break
+    if values:
+        filepaths = values.get("files", "").split(";")
+        folder = values.get("folder", "")
+        if filepaths and folder:
+            make_archive(filepaths, folder)
+            window["output"].update(value="Files compressed successfully.")
 
 window.read()
 window.close()
