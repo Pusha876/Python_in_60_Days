@@ -1,10 +1,8 @@
 Wash the dishes
-go get ice cream
+Get Ice Creams
 get a workout in
-make soup
-Go to bed
-go for a run
-change todos list function
+make soup bowls
+change todo list function
 Master Python
-
 Master Linux
+Go for a run
