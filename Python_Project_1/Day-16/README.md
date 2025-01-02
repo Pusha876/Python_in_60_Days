@@ -19,8 +19,10 @@ window.close()
 ### sg.text:
 Once the library is imported, you need to refer to the library name or its variable representation (i.e., sg) to be able to use the library functions or types.
 
+---
 ### window.read(), window.close():
 Once an object instance is stored in a variable, the methods of that type of instance can be accessed (e.g., read() and close())
 
+---
 ### = sg.text("Type in a to-do"), = sg.InputText(tooltip="Enter todo"), = sg.Button("Add"), = sg.Window('My To-Do App', layout=[[label], [input_box, add_button]])
 Libraries can offer many types. For example, the PySimpleGUI libray offers a window type, Text type, InputText type, Button type, etc. We use such types to create Windows, Text, InputText, Buttons and other instances. You can create as many instances as you want.

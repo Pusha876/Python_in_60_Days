@@ -21,14 +21,17 @@ while True:
 ### (timeout=200)
 The while loop run whenever an event happens unless you supply a timeout value. In that case the loop will run continuously every X (i.e., 200) milliseconds.
 
+---
 ### .update9(value=time.strftime(%b %d, %Y %H:%M:%S"))
 Whenever you want to update the value of a widget constantly, you can use the **update()** method in conjunction with the **timeout** argument explained in step 1.
 
+---
 ###  except IndexError:
 ###      sg.popup("Please select an item first.", font=("Helvetica", 20))
 If you expect an error, you should handle it with a try-except block and display a message to the user using a popup window.
 
-###  case "Exit":
+---
+###  case "Exit"
 ###     break
 ###  case sg.WIN_CLOSED:
 ###     break
