@@ -8,7 +8,7 @@ def get_data(place, forecast_days=None):
         f"http://api.openweathermap.org/data/2.5/forecast?q={place}"
         f"&appid={API_key}"
     )
-    response = requests.get(url)
+    response = requests.get(url, timeout=10)
     data = response.json()
     filtered_date = data["list"]
     num_values = 8 * forecast_days
