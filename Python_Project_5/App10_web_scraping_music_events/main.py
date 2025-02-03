@@ -3,6 +3,7 @@ import selectorlib
 import smtplib
 import ssl
 import os
+import time
 
 
 URL = "https://programmer100.pythonanywhere.com/tours/"
@@ -60,12 +61,14 @@ def read(exrtracted):
 
 
 if __name__ == "__main__":
-    scraped = scrape(URL)
-    extracted = extract(scraped)
-    print(extracted)
+    while True:
+        scraped = scrape(URL)
+        extracted = extract(scraped)
+        print(extracted)
 
-    content = read(extracted)
-    if extracted != "No upcoming tours":
-        if extracted not in content:
-            store(extracted)
-            send_email(message="Hey, there are new tours available!")
+        content = read(extracted)
+        if extracted != "No upcoming tours":
+            if extracted not in content:
+                store(extracted)
+                send_email(message="Hey, there are new tours available!")
+            time.sleep(4000)
