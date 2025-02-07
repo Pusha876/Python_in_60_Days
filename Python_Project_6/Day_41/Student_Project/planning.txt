@@ -1,0 +1,8 @@
+User can see a list of equipment
+User can purchase equipment
+User can get the price of equipment
+
+Classes:
+User
+Equipment
+Price
