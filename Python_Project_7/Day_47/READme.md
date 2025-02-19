@@ -1,25 +1,7 @@
-### Implement the following app features:
-* Toolbar
-* Status Bar
-* Edit Dialog
-* About Dialog 
+# Programming Skill of the Day
 
----
+##  Code Refactoring
+is the process of restructuring existing source code without changing its external behavior. The primary goal is to improve the design, structure, and implementation of the software, enhancing its non-functional attributes while preserving its functionality. Refactoring helps in improving code readability, reducing complexity, and making the source code more maintainable and extensible.
 
-**Objects are Instantiated**
-Humans are born. Objects are instantiated. A baby is an *instance* of a Human, an object is an *instance* of some Class.
-
-The act of creating an *instance* of a Class is called **instantiation** (Ta-Da!)
-
-**So declare, initialize, and instantiate come together like this**
-```
-MyClass myClassyReference = new MyClass();
-```
-
-In the above, it is wrong to say "... creating an instance of an object..."
----
-Three distinct things are going on (above) using distinct terminology and that terminology is not interchangeable :
-
-1. A reference variable is declared - ```MyClass myClassyReference```
-1. An object is instantiated (...from/of a given class, implied) - ```new MyClass()```
-1. The object is assigned to the variable. ```=```.
+## Code Smells
+Code smells are common programming characteristics that might indicate a problem in the code. Many times, the problem may be clear and visible. Other times, the problem may result in a future problem or a deeply rooted problem.
